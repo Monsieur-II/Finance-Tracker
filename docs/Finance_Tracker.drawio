@@ -1,0 +1,42 @@
+<mxfile host="Electron" modified="2025-09-12T12:12:53.208Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="dVqvDFn-t8-JPBefJxdS" version="24.6.4" type="device">
+  <diagram name="Page-1" id="J6RD1Q7yllRvDYEGqp7C">
+    <mxGraphModel dx="2181" dy="1872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ibqLOi3N_rjevVXb1XgC-1" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;fillColor=#006600;gradientColor=#3399FF;" parent="1" vertex="1">
+          <mxGeometry x="390" y="28" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ibqLOi3N_rjevVXb1XgC-6" value="Client&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="384" y="-2" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xVPhzS4vwSvejMzvaivl-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ibqLOi3N_rjevVXb1XgC-7" target="ibqLOi3N_rjevVXb1XgC-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ibqLOi3N_rjevVXb1XgC-7" value="" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#00994D;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon;prIcon=api" parent="1" vertex="1">
+          <mxGeometry x="355" y="300" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ibqLOi3N_rjevVXb1XgC-8" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Background job" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#4D4D4D;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon;prIcon=job" parent="1" vertex="1">
+          <mxGeometry x="630" y="110" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ibqLOi3N_rjevVXb1XgC-9" value="Primary Database" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;fillColor=#3399FF;gradientColor=#3399FF;" parent="1" vertex="1">
+          <mxGeometry x="-160" y="440" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ibqLOi3N_rjevVXb1XgC-11" value="Cache Store" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;fillColor=#3399FF;gradientColor=#3399FF;" parent="1" vertex="1">
+          <mxGeometry x="-83" y="100" width="83.33" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ibqLOi3N_rjevVXb1XgC-12" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Messaging Consumer" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon;prIcon=job" parent="1" vertex="1">
+          <mxGeometry x="550" y="400" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xVPhzS4vwSvejMzvaivl-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ibqLOi3N_rjevVXb1XgC-1" target="ibqLOi3N_rjevVXb1XgC-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xVPhzS4vwSvejMzvaivl-2" value="1. Upload transaction" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xVPhzS4vwSvejMzvaivl-1">
+          <mxGeometry x="-0.5517" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
