@@ -7,6 +7,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E46DF374-611
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{887C748D-C040-4489-B0B0-972F46553B10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{29F7CEDD-ECB7-409B-91F8-6F722F214AD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CA41ED6C-2F11-4771-B5A3-1D40E44E51CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.Domain", "src\Libraries\FinanceTracker.Domain\FinanceTracker.Domain.csproj", "{F952EA85-D949-4DF4-8F80-CD21F5910D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.Api", "src\APIs\FinanceTracker.Api\FinanceTracker.Api.csproj", "{1DC6225F-1301-408D-9088-31FF8607606F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.Pg.Sdk", "src\Libraries\FinanceTracker.Pg.Sdk\FinanceTracker.Pg.Sdk.csproj", "{21F9A981-A3B8-4763-AAEE-38EFB3CA4B66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.AwsS3.Sdk", "src\Libraries\FinanceTracker.AwsS3.Sdk\FinanceTracker.AwsS3.Sdk.csproj", "{A58475D6-1EB9-4F57-954C-98527F0BB24E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.Utils", "src\Libraries\FinanceTracker.Utils\FinanceTracker.Utils.csproj", "{162E3FD1-A9C3-4DCD-9D7C-5B9D8258BFBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +28,36 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29F7CEDD-ECB7-409B-91F8-6F722F214AD7} = {E46DF374-611F-419E-AB4A-6752C2C68E1D}
+		{CA41ED6C-2F11-4771-B5A3-1D40E44E51CD} = {E46DF374-611F-419E-AB4A-6752C2C68E1D}
+		{F952EA85-D949-4DF4-8F80-CD21F5910D94} = {CA41ED6C-2F11-4771-B5A3-1D40E44E51CD}
+		{1DC6225F-1301-408D-9088-31FF8607606F} = {29F7CEDD-ECB7-409B-91F8-6F722F214AD7}
+		{21F9A981-A3B8-4763-AAEE-38EFB3CA4B66} = {CA41ED6C-2F11-4771-B5A3-1D40E44E51CD}
+		{A58475D6-1EB9-4F57-954C-98527F0BB24E} = {CA41ED6C-2F11-4771-B5A3-1D40E44E51CD}
+		{162E3FD1-A9C3-4DCD-9D7C-5B9D8258BFBC} = {CA41ED6C-2F11-4771-B5A3-1D40E44E51CD}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F952EA85-D949-4DF4-8F80-CD21F5910D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F952EA85-D949-4DF4-8F80-CD21F5910D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F952EA85-D949-4DF4-8F80-CD21F5910D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F952EA85-D949-4DF4-8F80-CD21F5910D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC6225F-1301-408D-9088-31FF8607606F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC6225F-1301-408D-9088-31FF8607606F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC6225F-1301-408D-9088-31FF8607606F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC6225F-1301-408D-9088-31FF8607606F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21F9A981-A3B8-4763-AAEE-38EFB3CA4B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21F9A981-A3B8-4763-AAEE-38EFB3CA4B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21F9A981-A3B8-4763-AAEE-38EFB3CA4B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21F9A981-A3B8-4763-AAEE-38EFB3CA4B66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A58475D6-1EB9-4F57-954C-98527F0BB24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A58475D6-1EB9-4F57-954C-98527F0BB24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A58475D6-1EB9-4F57-954C-98527F0BB24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A58475D6-1EB9-4F57-954C-98527F0BB24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162E3FD1-A9C3-4DCD-9D7C-5B9D8258BFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162E3FD1-A9C3-4DCD-9D7C-5B9D8258BFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162E3FD1-A9C3-4DCD-9D7C-5B9D8258BFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162E3FD1-A9C3-4DCD-9D7C-5B9D8258BFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
