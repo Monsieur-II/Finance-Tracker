@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace FinanceTracker.Domain.Entities;
 
 public abstract class BaseEntity

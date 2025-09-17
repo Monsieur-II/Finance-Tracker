@@ -6,4 +6,5 @@ public class AwsS3Config
     public string SecretAccessKey { get; set; } = null!;
     public string FolderName { get; set; } = null!;
     public string S3BucketName { get; set; } = null!;
+    public string BaseUrl { get; set; } = null!;
 }

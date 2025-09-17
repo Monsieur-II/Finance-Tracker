@@ -1,4 +1,3 @@
-using Asp.Versioning;
 using FinanceTracker.Api.Services.Interfaces;
 using FinanceTracker.Utils;
 using Microsoft.AspNetCore.Mvc;

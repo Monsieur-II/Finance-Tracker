@@ -20,14 +20,13 @@ public class TransactionService(ILogger<TransactionService> logger,
     {
         try
         {
-            var isValidFile = ValidateFile(file, logger);
+            var (isValidFile, extension) = ValidateFile(file, logger);
             
             if (!isValidFile)
                 return false.ToApiResponse("File is null or empty", StatusCodes.Status400BadRequest);
-
-            var extenstion = "";
+            
             var ingestId = Guid.NewGuid().ToString();
-            var fileName = $"ingest_{ingestId}.{extenstion}";
+            var fileName = $"ingest_{ingestId}.{extension}";
             
             var result = await s3Service.UploadFileToBucketAsync(file!.OpenReadStream(), fileName);
             
@@ -39,10 +38,11 @@ public class TransactionService(ILogger<TransactionService> logger,
             var ingestionRecord = new Ingestion
             {
                 FileName = fileName,
-                IngestedAt = DateTime.UtcNow
+                IngestedAt = DateTime.UtcNow,
+                Extension = extension ?? string.Empty,
             };
             
-            await unitOfWork.Ingestions.AddAsync(ingestionRecord);
+            await unitOfWork.Ingestions.AddAsync(ingestionRecord, saveChanges: true);
             
             requiredActor.ActorRef.Tell(new ComputeTransactionMessage());
             
@@ -56,13 +56,13 @@ public class TransactionService(ILogger<TransactionService> logger,
         }
     }
     
-    private static bool ValidateFile(IFormFile? file, ILogger logger)
+    private static (bool isValid, string? extension) ValidateFile(IFormFile? file, ILogger logger)
     {
         if (file is null || file.Length <= 0)
         {
             logger.LogDebug("[.] No file was uploaded or file is empty");
 
-            return false;
+            return (false, null);
         }
 
         var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
@@ -74,9 +74,9 @@ public class TransactionService(ILogger<TransactionService> logger,
         {
             logger.LogDebug("[.] Invalid file extension: {Extension}", extension);
 
-            return false;
+            return (false, null);
         }
 
-        return true;
+        return (true, extension);
     }
 }
