@@ -1,15 +1,10 @@
-using FinanceTracker.Api;
 using FinanceTracker.Api.Extensions;
 using FinanceTracker.Api.Services.Interfaces;
 using FinanceTracker.Api.Services.Providers;
 using FinanceTracker.AwsS3.Sdk.Configs;
 using FinanceTracker.AwsS3.Sdk.Services.Interfaces;
 using FinanceTracker.AwsS3.Sdk.Services.Providers;
-using FinanceTracker.Domain.Entities;
 using FinanceTracker.Pg.Sdk;
-using FinanceTracker.Pg.Sdk.Repositories;
-using FinanceTracker.Pg.Sdk.Repositories.Interfaces;
-using FinanceTracker.Pg.Sdk.Repositories.Providers;
 using Microsoft.AspNetCore.HttpLogging;
 
 var builder = WebApplication.CreateBuilder(args);

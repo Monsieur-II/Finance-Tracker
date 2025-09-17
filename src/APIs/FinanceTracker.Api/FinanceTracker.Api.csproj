@@ -13,13 +13,18 @@
         <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.20"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.20"/>
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Commons\FinanceTracker.Domain\FinanceTracker.Domain.csproj" />
+      <ProjectReference Include="..\..\Commons\FinanceTracker.Utils\FinanceTracker.Utils.csproj" />
       <ProjectReference Include="..\..\Libraries\FinanceTracker.AwsS3.Sdk\FinanceTracker.AwsS3.Sdk.csproj" />
-      <ProjectReference Include="..\..\Libraries\FinanceTracker.Domain\FinanceTracker.Domain.csproj" />
       <ProjectReference Include="..\..\Libraries\FinanceTracker.Pg.Sdk\FinanceTracker.Pg.Sdk.csproj" />
-      <ProjectReference Include="..\..\Libraries\FinanceTracker.Utils\FinanceTracker.Utils.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Dtos\" />
     </ItemGroup>
 
 </Project>
